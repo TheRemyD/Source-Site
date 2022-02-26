@@ -1,0 +1,247 @@
+/* Box Model Hack */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/* Basic Styles */
+body {
+    color: #3a4053;
+    font-family: 'Open Sans', sans-serif;
+    background: #f5f9fc;
+}
+
+/* Header */
+header {
+    margin: 1rem;
+    background: #f5f9fc;
+}
+
+.header-left {
+    width: 20%;
+}
+
+.header-center {
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+nav {
+    width: 100%;
+    clear: both;
+}
+
+.header-right {
+    width: 20%;
+    text-align: right;
+}
+
+.mobile {
+    display: none;
+    margin-right: 5rem;
+}
+
+header a {
+
+    color: inherit;
+}
+
+.logo {
+    font-weight: 700;
+}
+
+.btn {
+    background: #3a4053;
+    color: #fff;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+}
+
+header section {
+    float: left;
+}
+
+.header-center ul {
+    list-style: none;
+}
+
+.header-center li {
+    float: left;
+    margin: 0 1rem;
+}
+
+main {
+    clear: both;
+    background: #f5f9fc;
+}
+
+main > section {
+    width: 50%;
+    float: left;
+}
+
+.main-left {
+    padding: 5rem 7rem;
+}
+
+.main-left span {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #808bb4;
+}
+
+.main-left input {
+    margin: 1rem -1rem 1rem 0;
+    padding: 0.11rem;
+    background: #e3e7ee;
+    color: #808bb4;
+    font-weight: 700;
+}
+
+.main-left p {
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #808bb4;
+}
+
+.main-right img {
+    width: 100%;
+}
+
+.features {
+    clear: both;
+    margin: 7rem;
+    padding: 5rem 0 0;
+}
+
+.features section {
+    width: 25%;
+    float: left;
+    line-height: 1.75rem;
+}
+
+.features section span {
+    font-size: 3rem;
+}
+
+.features section p {
+    padding: 1rem 0 1.5rem;
+    color: #808bb4;
+    font-weight: 500;
+}
+
+.information {
+    background: #fff;
+}
+.container {
+    clear: both;
+    margin: 7rem;
+    padding-top: 7rem;
+    width: 50%;
+}
+
+.information h2 {
+    font-size: 3rem;
+}
+
+.information p {
+    line-height: 1.5rem;
+    padding: 2rem 0;
+    color: #808bb4;
+    font-weight: 500;
+}
+
+@media (min-width: 350px) and (max-width: 400px) {
+    .main-left,
+    .main-right {
+        padding-left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-left h1 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-left,
+    .main-right {
+        padding-left: 2rem;
+        width: 100%;
+    }
+
+    .features {
+        margin: 0 auto;
+        padding: 0 3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .features section {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 764px) {
+    .mobile {
+        display: block;
+    }
+
+    .header-center, .header-right {
+        display: none;
+    }
+
+    .main-left,
+    .main-right {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 4rem;
+    }
+
+    .main-left a {
+        padding: 0.25rem 4.75rem;
+    }
+
+    .main-left p {
+        margin-top: 2rem;
+    }
+
+    .features section {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .main-right {
+        width: 100%;
+        margin: 0 5rem;
+    }
+    
+    .main-left {
+        width: 75%;
+    }
+
+    .features section {
+        width: 50%;
+    }
+}
